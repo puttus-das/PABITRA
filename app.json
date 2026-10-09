@@ -1,0 +1,42 @@
+
+{
+  "name": "pabitra-bot",
+  "description": "PABITRA-BOT - WhatsApp MD Bot with Express health-check API and pairing support",
+  "repository": "https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY",
+  "logo": "https://node-js-sample.herokuapp.com/node.png",
+  "keywords": [
+    "pabitra-bot",
+    "whatsapp-bot",
+    "baileys",
+    "nodejs",
+    "express",
+    "pairing"
+  ],
+  "stack": "container",
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ],
+  "env": {
+    "PORT": {
+      "description": "HTTP server port",
+      "value": "5000",
+      "required": false
+    },
+    "TELEGRAM_BOT_TOKEN": {
+      "description": "Telegram bot token for pairing control",
+      "required": false
+    },
+    "TELEGRAM_ADMIN_IDS": {
+      "description": "Authorized Telegram user IDs",
+      "required": false
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "basic"
+    }
+  }
+}
